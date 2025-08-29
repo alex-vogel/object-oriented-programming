@@ -1,0 +1,83 @@
+when comparing strings you can use ==, != , <, >, <=, >= to compare. This will compare each position in the strings
+
+IE for 2 strins abc and abe, first the ascii codes of the first position are compared, they are the same so they move on. Then when comparing "a" and "e" e has a higher number on the ascii
+chart and thus it is deemed that abe > abc must output true or 1
+
+
+------
+
+
+Named Constants: A named constant is an identifier that represent a permanent value which can not be edited and will be constant throughout
+declaring: const double PI = 3.14159
+-----------
+
+we can write out conditional expressions a different way
+if (x > 50){
+    y = 50;
+}
+else{
+    y = x;
+}
+can be written as 
+y = (x > 50) ? 50 : x;
+---------
+strings practice:
+
+#include <iostream>
+#include <string>
+
+int main(){
+    std::string s0("W");
+    std::string s1 = "F";
+    std::string s2 = s0 + s1;
+    s2 += 'N';
+    s2 += (s1 < s2) ? s0 : s1;
+    std::cout << s2 << "Z";
+}
+
+Output: WFNWZ
+------------
+
+Range based for loop:
+executes a for loop over a range, It is more readable equivelnt to traditional for loop operating over range of values
+
+for(range_declaration : range_expression)
+
+ex: Printing string characters
+std::string str = "OOP";
+for (char c : str){
+    std::cout << c << '';
+}
+
+----------------
+
+Defining a function
+
+a function consists of its name, parameters, return type
+ex:
+
+int my_rand(int min, int max){
+    int rand_num = rand() % (max - min + 1) + min;
+    return rand_num;
+}
+
+REMEMBER: ALWAYS REMEMBER TO INCLUDE A FUNCTION PROTOTYPE 
+
+
+
+function call stack:
+an annalogy you could use, consider a pile of plates. if you want to add a function you need to add it to the top, if you want to take away a plate you can only
+take it from the top
+
+
+--------------------------------
+Reference variables:
+A reference variable is an alias for another variable. Any changes made through the reference variable are actually performed on the original variable
+
+To declare a reference varibale, place ampersand in front of the name. any change to this variable, will be seen in its original. any change to the original is seen in the
+referance. This is important because you can send references in functions as parameters making any changes seen outside of the function
+
+
+
+in the function parameter you can add const infront to make sure the reference doesn't get changed. You do this because if you dont pass by reference then you need to make a
+copy which requires more storage and is ineffective 
