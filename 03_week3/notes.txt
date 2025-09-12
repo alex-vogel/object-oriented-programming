@@ -1,0 +1,68 @@
+You can have overloading functions where two functions have the same name with different signatures and it will use the one which is best for certain scenario
+you can have a function "getMax" which takes 2 integers and returns the bigger one
+you can also have a function "getMax" which takes 2 doubles and returns the bigger one.
+
+When you call "getMax" it will send it to the right one based on the parameters
+ex:
+
+int max(int, int);
+double max(double, double);
+double max(double, double, double);
+
+
+you can add a default argument
+ie:
+void printArea(double radius = 1){
+
+}
+
+^ if you call printArea() instead of printArea(value), it will return the area of a circle with radius 1
+If you call it with a value it will take on the value.
+
+When a function contains a mixture of parameters with an without default values, those values must be declared last
+
+IE:
+void t1(int x, int y = 0, int z); //doesnt work
+void t2(int x, int y = 0, int z = 0); // This will work
+
+
+
+-----VARIABLES
+variables can be local, global, or static. The difference is the scope
+
+A global variable is defined outside of any function and can be used anywhere. These are generally bad to have because its unreliable -> changing it at one point changes
+it forever which can lead to bugs which are hard to debug
+CONSTANT global variables are chill tho cause they cant be changed.
+
+global variables default to being equal to 0
+
+
+Local variables: created in a function
+
+Static local variable: their values are stored in the memory throughout the entire program but can only be accessed within the function which it is called
+\/
+kind of inbetween global and local
+\/
+If you set the value of a static variable to 3 then end the function and recall it later, that variable will still be equal to 3
+
+
+
+
+Recursion: A function that calls itself again
+A base case is when the function shouldnt call itself again while a recurisve case is when the function should call itself again
+When it calls itself again it adds to the function stack. When the recursion is done, it goes down a level. If theres nothing else for it to do itll go down a level...
+
+Recursion can be a good solution if you want to solve something in the opposite order.
+
+Any problem that can be solved with recursion can be solved iteratively
+
+
+Recursion has many negatives:
+-It repeatedly calls the function, which adds overhead.
+-This can be expensive in both processor time and memory space.
+-Recursion can lead to stack overflow if not properly managed
+
+"Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer"
+
+Recursion is kind of like dominos where each call is setting up your dominos, but when theyre all set up (decided by base case) The last domino placed falls, making the
+dominos placed before it fall in the opposite order they were placed.
