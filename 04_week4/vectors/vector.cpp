@@ -101,8 +101,9 @@ void rotateLeft(std::vector<int>& v, int k){
     k %= v.size();
     while(k) {
         // First step: Take first element, put it at the last
-        v.insert(v.end, v.begin());
-        v.erase(v3.begin())
+        v.insert(v.end(), v.front());
+        v.erase(v.begin());
+        k--;
     }
 
 }

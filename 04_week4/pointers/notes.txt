@@ -1,0 +1,117 @@
+Quick recap:
+
+Vector: Kind of like a more flexible array -> dynamic array.
+
+A vector is like an array in that each item is stored next to eachother in the memory.
+
+Remmber you must include <vector>
+
+std::vector<data type> name {0, 1, 2, 3 ,4 ,5}
+
+an iterator tracks location in a vector. -> it acts like a pointer, providing a way to access and traverse the elment
+
+
+To delete an element from the back: vector.pop_back();
+
+
+
+
+POinters:
+
+use & to assign address
+int y = 5;
+int *yPtr = &y;
+
+Indication operator (*)
+- THe unary * operator, commonly referred to as the dereferencing operator returns the alue of the object tow hich it points
+std::cout << *yPtr; <- Prints the value of the variable being pointed to by yPtr
+
+ie:
+string y = "hello"
+int *yPtr = &y;
+*yPtr = "goodbye"
+print(yPtr);
+
+returns "goodbye"
+
+
+Initializing a pointer:
+You should always initialize pointers to prevent errors.
+- dereferencing a poitner tat isnt initialized could cause runtime error or accidentally modify important data
+- An attempt to dereferenec a variable that isnt a pointer is a compilation error
+-in c++ you use nullptr for a null pointer
+-dereferencing a null pointer is often a fatal execution-time error.
+        ex: nullptr, &;
+
+
+Whats the output of this code?
+it x = 30;
+int* pX = &x;
+std::cout << *pX << endl;
+
+This outputs 30 because were dereferencing the pointer which points to pX
+
+
+
+
+
+You can use a pointer to pass by reference
+
+example:
+
+void swap3(int* p1, int* p2){
+    int temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+}
+
+This function will swap the values in the variables pointed to by p2 and p1 
+
+
+
+Using const qualifier with pointers:
+
+- The const qualifier enables you to enfrom the compiler that the value of a particular variable shouldnt be modified
+- Always award a function enough acces to the data in its parameters to accomplish its task but no more.
+
+
+
+* four ways to pass a pointer to a function:
+
+-non-constant pointer to nonconstant data
+-a constant pointer to nonconstant data
+-a nonconstant pointer to constant data
+-constant pointer to constant data.
+
+
+Most access / least secure is non-constant pointer to nonconstant data.
+
+
+By adding 1 to a pointer to a string/vector/array, you go to the next value in the structure 
+
+
+To make a constant pointer
+
+int * const ptr = &x; //Creates a constant pointer to the address of variable x;
+
+
+a function can return a pointer
+int* reverse(int* list, int size){
+}
+
+A c++ function may have pointer parameters
+
+void f(int* p1, int* p2); // the first parameter is a pointer to p1, the seond is a pointer to the address of p2
+
+
+
+
+pointers to void: can hold address to any type and can be typecasted to any type.
+
+pointers to functions (pass a function to another function, create an array of functions)
+
+arrays of pointers (to store strings efficiently)
+
+Self-Referential data structures
+
+Dynamic memory alloation (allocate a new memory at runtime of a program)

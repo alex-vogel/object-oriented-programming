@@ -29,7 +29,9 @@ void printCombinations(int n){
 void printCombinations(std::string& s, int n,int i){
     //base case
     if (i >= n){
+        if(s[0] != s[1] && s[1] != s[2] && s[0] != s[2]){
         std::cout << s << std::endl;
+        }
         return;
     }
     while(s[i] <= 'z'){

@@ -11,7 +11,7 @@ Reverse the vowels???
 #include <iostream>
 #include <string>
 #include <vector>
-void print(const std::vector<int>& v);
+
 
 int main(void) {
 char temp = 'z';
@@ -37,29 +37,25 @@ std::string s(
 // reverseVowels(s);
 
 while(vowelPositions.size() > 1){
-
 temp = s[vowelPositions.back()];
-s[vowelPositions.back()] = vowelPositions.front();
+s[vowelPositions.back()] = s[vowelPositions.front()];
 s[vowelPositions.front()] = temp;
 vowelPositions.pop_back();
 vowelPositions.erase(vowelPositions.begin());
-
-
 }
 
 
 // reverse(s);
-std::cout << s << std::endl;
+
+
+for(int j = s.length() - 1; j >= 0; j--){
+    std::cout << s[j];
+}
+
+
 return 0;
 }
 
 
 
 
-void print(const std::vector<int>& v){
-    for (int el : v){
-        std::cout << el << ' ';
-    }
-    std::cout << std::endl;
-    
-}
