@@ -16,6 +16,29 @@ private: //Access specifier
 
     public://Access specifier 
 
+    // Constructor
+    // -Constructors have no return type.
+    // -Constructors are called when the object is created
+    // -Constructors should be public
+    // -Constructors cannot be called explicitely.
+    
+    // No-argument constructor (first version)
+/*    Route(){
+        length = 0;
+    }
+*/
+    // No - argument constructor (second version)
+    Route() : length(0){
+
+    }
+    
+    // Overloaded constructor:
+    Route(std::string source_, std::string destination_){
+        setSource(source_);
+        setDestination(destination_);
+    }
+
+
     // Get functions (getters, accessor functions)
     std::string getSource(void){
         
@@ -24,6 +47,9 @@ private: //Access specifier
     std::string getDestination(void){
         
         return destination;
+    }
+    int getLength(void){
+        return length;
     }
 
 
@@ -42,6 +68,8 @@ private: //Access specifier
         std::cout << source  << " -> " << destination << ": " << length <<  std::endl;
     }
 
+    //Thhis function returns whether the route is long or not
+    bool isLong();
 };
 
 
@@ -60,5 +88,32 @@ int main(){
 
     fall_trip.setDestination("New York");
     fall_trip.print();
+
+    //Create fall object with constructor with argument
+    Route christmasTrip("Orlando", "London");
+    christmasTrip.print();
+
+            /*
+            Review:
+            Route route1; //No argument constructor
+            Route route2("A", "B"); // Constructor with arguments
+            Route route3 = Route() // No argument contructor
+            Route route4 = Route("C", "D");
+
+            Route route5(); // DOES NOT WORK -> This is a function prototype.
+            */
+
+        std::cout << christmasTrip.isLong() << std::endl;
+
     return 0;
+}
+
+// Method implementation
+bool Route::isLong(){
+    if(getLength() > 300){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
