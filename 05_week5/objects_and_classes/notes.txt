@@ -1,0 +1,75 @@
+Objects have some things in common
+
+-They all have atributes (size, shaoe, color. weight...) and they all exhubit behavior (a ball rolls, bounves, inflates)
+
+-Object oriented design OOD: models software in terms similar to those that people use to describe real world objects.
+
+
+
+Number-to-object mnemonic technique
+
+ASsociate each digit 0-9 with a specific sound, consonant or something
+
+
+why use objects?
+Encapsulation:bundling data and methods together, restricting direct access to an object's internal state.
+
+Abstraction: Hiding complex implementation details and explosing only necessary functionality.
+
+Modularity: breaking programs into reusable, self contained units.
+
+--------
+Languages like C++ are object oriented.
+
+- Programming in such a language is called object oriented programming, and it allows you to implement an object oriented design
+as a working software system
+
+-Languages like C, on the other hand are procedural.
+
+-In C: The unit of programming is the functionan
+
+c++: The class
+----------
+Lets say we want to have an object called lecture. Each lecture has a name, a duration. If we want to pritn it
+
+void printLecture(const string& title, int duration){
+    ...
+}
+
+Lets say we have a course which has many different lectures. We could create 2 vectors -> one which holds all of the titles (strings),
+and the other holds durations (int)
+
+^
+This is really bad for scalability
+-----
+Intruduce structures:
+A struct in C++ is a user-defined data type that groups related variables (called members) under a single name
+
+Members: Variables or functions defined within the struct
+Purpose: Used to bundle related data and, optionally, behaviors.
+
+struct StructName {
+    ..
+}
+
+or
+
+typedef struct StructName{
+        ...                                          (more useful generally)
+}
+
+
+
+
+
+
+----------
+
+
+Data Field Encapsulation
+
+*Making data fields private protects data and makes the class easy to maintain.
+
+Encapsulation is specifically referencing having private data.
+
+To prevent direct modifications of properties, you should declare the data field private, using the key word.
