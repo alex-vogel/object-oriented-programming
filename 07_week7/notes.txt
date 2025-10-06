@@ -1,0 +1,42 @@
+Remember:
+Header file contains class definition and prototypes (.hpp file)
+
+Source file contains the implementation of the methods in the class (.cpp file)
+
+
+
+Instance and static members:
+
+An instance variable is tied to a specific instance of the class; its not shraed among objects of the same class
+
+A static variable (Class variable) is shared by all objects of the class. Static variables store values in common memory locations.
+
+A static function cannot access instance memebers of te class
+
+ex:
+    static int numberOfObjects;
+    static in getNumberOfOBjects();
+
+
+Static variables and functions can be accessed without creating objects
+
+Instance functions can only be called from a specific instance
+
+Use ClassName::functionName(arguments) to invoke a static function and ClassName::staticVariable to access static variables
+
+
+A variable or unction thats dependent on a specific instance of the class should be an instance vaiable or function. A variable or
+function that isnt dependent on a specific instance
+
+
+EX:
+
+class Math{
+    public:
+    static int square(int n);
+    static int add(int n1, int n2);
+};
+
+and now you can call
+std::cout <<Math::square(5) << '\n';
+in your main without calling an object.

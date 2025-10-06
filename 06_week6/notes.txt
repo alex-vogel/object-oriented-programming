@@ -1,0 +1,12 @@
+Constructors:
+for when an object is created
+
+The syntax tp create an object using a constructor with arguments is 
+ClassName(arguments);
+
+
+No argument constructor:
+Handles creation when values arent provided ie:
+
+IE:
+Route route5 = Route("A", "B");
