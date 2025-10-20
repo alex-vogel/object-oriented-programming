@@ -1,0 +1,66 @@
+Introduction to templates:
+
+Suppose you want to find the maximum of two integers.
+
+Two doubles, two strings, twoc haracters.
+
+
+What if we didnt need to overload? It would save typing, space, and make the program easy to maintain if you could simpily define one function
+with a generic type as follows:
+
+GenericType maxValue(const GenericType& value1, const GenericType& value2)
+
+
+
+Templats:
+
+
+Generic Max Functions
+
+-The definition for the function template begins with the keyword template followed by a list of parameters (<typename T>)
+
+By convention, a single capital letter such as T is used to denote a type parameter.
+
+
+template<typename T>
+
+
+T maxValue(const T& value1, const T& value2){
+    if *value1 > value2){
+        return value1;
+    }
+    else{
+        return value2;
+    }
+}
+
+
+
+
+
+
+
+The generic maxValue function can be used to return a maximum of two values of any type, provided that:
+Thte two values have the same type and the two calues can be compared using the > oeprator.
+
+You can do multiple parameters inside the brackets such as
+<typename T1, typename T2, typename T3>
+
+
+
+
+
+
+Class Templates:
+template<typename T>
+class Stack{
+    public:
+    Stack()'
+    bool empty() const;
+    T peek() const;
+    void push(T value);
+    T pop();
+    int getSize() const;
+    
+    private:
+};

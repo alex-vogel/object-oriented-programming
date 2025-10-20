@@ -1,0 +1,81 @@
+dynamic memory allocation is the process of assigning the memory space during execution time or run time.
+
+*In languages like C and C++, heap allocation allows for manual memory management, giving the programmer control over
+when memory is allocated and deallocated. This can be both an advantage and a responsibility as it requires careful management to avoid
+memory leaks and other issues.
+
+* In languages like Javam C#, and python, the heap is managed by a garbage collector, which automatically deallocates memory when
+its no longer needed.
+
+
+To free memory use the delete operator.
+to delete variable p -> delete p;
+to delete array x -> delete [] x;
+
+to create a double
+double* pD - new double;
+
+to access pD?
+*pD;
+
+to delete it?
+delete pD;
+
+
+
+
+Advantages:
+*When we do not know how much memory would be needed for the program beforehand (size is determined at runtime, oppsed to compile time)
+*Objects in heap have a dynamic lifetime, they can exist beyond the scope of the function or method that created them.
+*Enables handling of large data sets that may exceed stack memory limits, as dynamic memory is allocated on the heap.
+*Complex data structures like linked lists, trees, ect..
+
+
+To create dynamic object:
+ClassName* pObject = new ClassName();
+
+
+
+example:
+class Building{
+    int n_floors
+}
+int main(){
+    Building* pBuilding1 = new Building();
+    std::cout >> pBuilding1 -> n_floors;
+    ## or do this:
+    std::cout >> (*pBuilding1).n_floors;
+}
+
+
+
+To create a string dynamically:
+
+std::string* p = new std::string;
+
+(*p).length();
+## or
+p -> size();
+
+
+to delete something in the heap simpily do delete
+
+
+Custom copy constructor
+ex:
+Course::Course(const Course& course){
+    courseName = course.name;
+    numOfStudents = course.numOfStudents;
+    capacity = course.capacity;
+    students = new string[capacity];
+}
+
+
+the "this" pointer
+
+-The this pointer points to the calling object itself.
+-Sometimes you need to reference the hidden data field name in the function in order to set a new value to it
+-A hidden data field can be accessed using the this keyword
+
+ex a function that takes int age which your supposed to set variable age equal to
+this->age = age;

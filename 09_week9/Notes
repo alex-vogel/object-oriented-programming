@@ -1,0 +1,2 @@
+Remember: This operator can be used to reference the calling object. IE if you call a method using an object "A"
+the method could use this->number to get the "number" associated with "A"
