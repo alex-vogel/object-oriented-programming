@@ -1,0 +1,9 @@
+Rule of three:
+    - The copy constructor, the = assignment operator, and the destruction are called the rule of three, or the big three.
+    - If they are not defined explicitly, all three are created by the compiler automatically
+    
+
+
+
+
+    Child class is more expanded version of the base class.

@@ -1,0 +1,40 @@
+C++ allows you to define functions for operators. This is called operator overloading.
+
+Operator overloading
+    -The operators are funcitons defined in a class. These functions are named with keyword operator followed by actual operator
+    -Most of the operators in C++ can be defined as fuinctions to perform desireable operator
+    - data type ClassName::operator OperatorName
+    (const ClassName &ParameterName)
+
+
+    -You cannot create new operator; only existing operators can be overloaded.
+
+    There are few which CANT be overloaded
+    ?:    .   .*   ::
+
+    C++ defines the oeprator precedence and associativity. YOu cannot change the operator precedence and associatvitiy by overloading.
+    if you overload * and +, the * will still be first.
+
+
+    Most operators are bianary operators. Some are unary, You cannot change the number of operands by overloading. For example the divide /
+    operator is bianary.
+
+
+
+    bool ClassName::operator<(const CLassName&);
+
+
+
+    Bianary operator: two inputs returns bool
+
+    Arithmetic operators: Return a completely new thing by using two inputs
+
+
+
+
+    return by reference:
+    int& operator[](int index);   we return by reference because if we dont, we simpily return a copy and if any changes are made they
+                                   wont be made to the actual object, just its copy
+
+
+Lvalue referes to anything that appears on the left side of the operator
