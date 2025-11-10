@@ -1,0 +1,40 @@
+REmember: Protected things are somewhere between public and private data. They are accessible by the class itself, and child classes
+
+
+
+There are also different types of inheritance
+public: Everything stays the same
+protected: Public will become protected
+private: Everything becomes private.
+
+
+
+Polymorphism: variable, function, or objects can take on multiple forms.
+
+-Every instance (object) of a derived class is also an instance of (object of) its base class.
+-Class objects belonging to the same hierarchical tree (inherited from a common parent class)
+    may have functions with the same name, but with different behaviors
+- This polymorphism means that a variable of a supertype can refer to a subtype object
+- Polymorphism achieved via pointers/reference + virtual functions
+
+
+
+
+Virtual functions:
+A function can be implememented in several clases along the inheritance chain. Virtual functions enable the system to decide
+which function is invoked at runtime based on the actual type of object.
+
+
+
+
+
+if you know a function will be redefined in other classes, you should make it a virtual function. If a function wont be redefined, dont.
+We call a class with a virtual function a polymorphic type.
+
+
+
+if you know that someone will inherit from this class, you should define methods as virtual.
+
+
+
+Abstract class: A class with one pure virtual function (undefined function that is based on the objects that call it)
