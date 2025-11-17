@@ -1,0 +1,48 @@
+Dynamic casting
+
+-Safe downcasting in inheritance hierarchies
+-Uses dynamic_cast<T*>(ptr) or dynamic_cast<T&>(ref)
+-Requires polymorphic class
+
+
+
+
+
+
+
+
+
+
+
+-----------intro to throwing
+
+If you have a program which just divides 2 numbers it works perfectly till denominator is set to 0. You could create an if statement
+but what if the fuction needs to return an integer?
+
+How could we differentiate a return of 0 from numerator being 0 or denominator being 0?
+\/
+We need to show the function that something bad has happened, we throw an exception.
+
+    -You can throw any data type or class object you want, so long as somewhere the exception is caught somewhere
+
+
+
+Exception handling:
+-Enables a function to throw an exception to its caller
+-Often, the called function does not know what to do in case of error
+- The fundamental idea of exception handling is to seperate error detection (done in a called function) from error handling (done in calling)
+
+- Exception handling enablesa  program to deal with exceptional situations and continue its normal execution
+
+try{
+    code to try;
+    throw an exception with a throw statement
+}
+catch(type ex){
+    code to process exception;
+}
+
+
+throw -> sends an error
+try -> watches code
+catch -> fixes 

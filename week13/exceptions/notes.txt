@@ -1,0 +1,20 @@
+Exception classes:
+
+
+Hierarchy of exceptions
+
+exceptions live in <stdexcept> header
+
+but you can also create your own exception class.
+    This is just like any C++ class, but often it is desireable to derive it from exception or derived class of exception so that you
+    can utilize the common operators (e.g. the what() function)
+    #include <stdexcept>
+
+
+
+
+Exception Propagation:
+    -An exception is thrown through a chain of calling functions until it is caught, or it reaches the main function.
+        
+        -When an exception occurs in a chain of functions, the exception will disrupt the program, going through the chain till its
+        resolved. 
