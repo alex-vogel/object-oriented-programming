@@ -1,0 +1,16 @@
+you can open a file in many modes
+
+ios::in, ios::out, ....
+
+you can write/read data into a filw using bianary, ios::bianary
+
+
+
+often you need to write data other than characters/
+in C++ use reinterpret_cast
+
+reinterpret_cast<dataType>(address) //NOTE: you cant use a pointer here, the object itself must be sent
+
+
+
+DO NOT USE BINARY with pointers, strings, vectors, or virtual functions
